@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1f2447;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1f2447;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #1f2447;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #1f2447;
+      outline: none;
+      box-shadow: 0 0 5px rgba(31,36,71,0.5);
+    }
+
+    .radio-group, .checkbox-group {
+      margin-bottom: 15px;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      font-weight: normal;
+      margin-right: 15px;
+      color: #333;
+    }
+
+    .custom-button {
+  background-color: #1f2447;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #2f3770;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Form Pendaftaran</h2>
+    <form>
+      <!-- Input Text -->
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama anda" required>
+
+      <!-- Input Password -->
+      <label for="pw">Password</label>
+      <input type="password" id="pw" name="pw" placeholder="Masukkan password" required>
+
+      <!-- Textarea -->
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan anda..."></textarea>
+
+      <!-- Radio -->
+      <div class="radio-group">
+        <label>Jenis Kelamin:</label>
+        <input type="radio" id="laki" name="gender" value="Laki-laki">
+        <label for="laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="gender" value="Perempuan">
+        <label for="perempuan">Perempuan</label>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="checkbox-group">
+        <label>Hobi:</label>
+        <input type="checkbox" id="membaca" name="hobi" value="Membaca">
+        <label for="membaca">Membaca</label>
+        <input type="checkbox" id="musik" name="hobi" value="Musik">
+        <label for="musik">Musik</label>
+        <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">
+        <label for="olahraga">Olahraga</label>
+      </div>
+
+      <!-- Select -->
+      <label for="kelas">semester</label>
+      <select id="kelas" name="kelas">
+        <option value="10">semester 1</option>
+        <option value="10">semester 2</option>
+        <option value="10">semester 3</option>
+        <option value="10">semester 4</option>
+        <option value="10">semester 5</option>
+        <option value="10">semester 6</option>
+        <option value="10">semester 7</option>
+        <option value="10">semester 8</option>
+    </select>
+      <!-- Submit -->
+      <a href="index.html" style="text-decoration: none;">
+        <div class="custom-button">lanjut</div>
+      </a>
+
+</body>
+</html>
