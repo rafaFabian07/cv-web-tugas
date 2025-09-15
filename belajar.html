@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+<form name="formdaftar">
+    <table>
+        <tr>
+            <td>Bilangan 1</td>
+            <td><input type="number" id="angka1" size="30"></td>
+        </tr>
+        <tr>
+            <td>Bilangan 2</td>
+            <td><input type="number" id="angka2" size="30"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" onclick="hitung('+')">+</button>&nbsp;
+            <button type="button" onclick="hitung('-')">-</button>&nbsp;
+            <button type="button" onclick="hitung('*')">x</button>&nbsp;
+            <button type="button" onclick="hitung('/')">/</button>&nbsp;
+            <button type="reset" onclick="return">Reset</button>
+        </td>
+        </tr>
+    </table>
+    <div id="output">Hasil: -</div>
+
+    <script>
+        function hitung(op){
+        let a = parseFloat(document.getElementById('angka1').value);
+        let b = parseFloat(document.getElementById('angka2').value);
+        let output = 0;
+
+        if (isNaN(a) || isNaN(b)) {
+        document.getElementById('hasil').innerText = "Hasil: Masukkan angka valid!";
+        return;
+      }
+
+    switch(op) {
+        case '+':
+          output = a + b;
+          break;
+        case '-':
+          output = a - b;
+          break;
+        case '*':
+          output = a * b;
+          break;
+        case '/':
+          if (b === 0) {
+            document.getElementById('output').innerText = "Hasil: Tidak bisa dibagi 0!";
+            return;
+          }
+          output = a / b;
+          break;
+      }
+
+      document.getElementById('output').innerText = "Hasil: " + output;
+    }
+    </script>
+</body>
+</html>
