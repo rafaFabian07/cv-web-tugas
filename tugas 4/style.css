@@ -1,0 +1,33 @@
+body{
+    background-image: url("retro-game.jpg");
+    background-repeat: repeat-x;
+   
+
+}
+@font-face {
+    font-family: 'retro'; 
+    src: url('retro.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal;
+}
+h1{
+    font-family: 'retro';
+    color: goldenrod;
+    text-align: center;
+    margin-top:60px;
+    font-size: 80px;
+}
+
+.card{
+    font-family: 'retro';
+    background-color: #122b56;
+    color: white;
+}
+.card, h5 {
+    text-align: center;
+}
+
+img{
+    width: 80px;
+    height: 300px;
+}
